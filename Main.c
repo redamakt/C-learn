@@ -1,13 +1,18 @@
 #include <stdio.h>
 
-int main() {
-   
-   char userName[] = "lhssan";
-   int userNamber = 15;
-   
-   printf("Hello %s \n", userName);
-   printf("Your number is %d \n", userNamber);
+int main () {
+   char userName[50];
+   int tries = 0;
 
-
-   return 0;
+   while (tries < 3)
+   {
+      printf("Enter a string : ");
+      fgets(userName, sizeof userName, stdin);
+      printf("You entered: %s \n", userName);
+      tries++;
+      printf("%d \n",tries);
+   }
+   
+  
+   return(0);
 }
