@@ -1,13 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
-   
+int main () {
+   char userInp[50];
    char userName[] = "lhssan";
-   int userNamber = 15;
+   int tries = 0;
+
+   while (tries < 3)
+   {
+      printf("Enter a username : ");
+      fgets(userInp, sizeof userInp, stdin);
+
+      if (userInp == userName )
+      {
+        
+         printf("Hello %s You're number is: %d \n",userName , 16);
+         exit(1);
+         
+      }
+      else if(userInp!=userName){ tries++; printf("%d \n",tries);};
+      
+      
+   }
    
-   printf("Hello %s \n", userName);
-   printf("Your number is %d \n", userNamber);
-
-
-   return 0;
+   
+  
+   return(0);
 }
